@@ -11,6 +11,11 @@ class UrlsController < ApplicationController
     end
   end
 
+  def show
+    @url = Url.where(id: params[:id]).first
+    @url
+  end
+
 
   private
 
