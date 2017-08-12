@@ -1,10 +1,12 @@
 class Result
+  attr_reader :model, :errors
+
   def initialize model
     @model    = model
-    @errors   = @model.errors
+    @errors   = @model.errors.full_messages
   end
 
   def success?
-    @model.errors.empty?
+    @errors.empty?
   end
 end
