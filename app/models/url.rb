@@ -1,3 +1,14 @@
+# == Schema Information
+#
+# Table name: urls
+#
+#  id         :integer          not null, primary key
+#  original   :string           not null
+#  shortened  :string           not null
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
 class Url < ApplicationRecord
   before_validation :create_shortened_url
 
