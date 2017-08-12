@@ -1,7 +1,7 @@
 class Url < ApplicationRecord
   before_validation :create_shortened_url
 
-  validate :original, :shortened
+  validates :original, :shortened, presence: true, uniqueness: true
 
   def create_shortened_url
     self.shortened = SecureRandom.base58(6)
