@@ -10,7 +10,12 @@ RSpec.describe 'Creating a new shortened url' do
   end
 
   it 'allows you to create a new shortened url' do
+    visit new_url_path
 
+    fill_in 'url[original]', with: 'https://www.example.com'
+    click_button 'Shorten Your Url!'
+
+    expect(Url.count).to be 1
   end
 
   it 'allows you to enter an url that exists' do
