@@ -42,7 +42,7 @@ gem 'sprockets-es6'
 gem 'bootstrap', '~> 4.0.0.alpha5'
 
 # HAML
-gem "haml-rails", "~> 0.9"
+gem 'haml-rails', '~> 0.9'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
