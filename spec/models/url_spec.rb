@@ -1,7 +1,18 @@
+# == Schema Information
+#
+# Table name: urls
+#
+#  id         :integer          not null, primary key
+#  original   :string           not null
+#  shortened  :string           not null
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
 require 'rails_helper'
 
 RSpec.describe Url, type: :model do
-  let(:url) { Url.create(original: 'https://www.example.com') }
+  let(:url) { create(:url) }
 
   it 'creates a shortened url when created' do
     expect(url.shortened).to_not be nil
