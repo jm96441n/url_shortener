@@ -43,7 +43,8 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'rspec-rails', '~> 3.6'
   gem 'pry-rails'
-   gem 'guard-rspec', require: false
+  gem 'guard-rspec', require: false
+  gem 'factory_girl_rails'
 end
 
 group :development do
