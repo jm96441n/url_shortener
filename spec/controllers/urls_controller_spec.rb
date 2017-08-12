@@ -5,7 +5,9 @@ RSpec.describe UrlsController, type: :controller do
   context 'POST create' do
     let(:params) {
       {
-        original: 'https://www.google.com'
+        url: {
+          original: 'https://www.google.com'
+        }
       }
     }
 
