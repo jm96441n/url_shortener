@@ -11,7 +11,7 @@ RSpec.describe UrlsController, type: :controller do
       }
     }
 
-    it 'creates a new url' do
+    it 'creates a new url if it does not exist' do
       expect{ post :create, params: params }.to change{ Url.count }.by 1
     end
   end
