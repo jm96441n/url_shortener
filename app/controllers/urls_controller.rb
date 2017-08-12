@@ -1,5 +1,9 @@
 class UrlsController < ApplicationController
 
+  def new
+    @url = Url.new
+  end
+
   def create
     @response = Url::Create.new(create_params[:original]).()
     @url      = @response.model
