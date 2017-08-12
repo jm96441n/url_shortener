@@ -1,5 +1,5 @@
 class ServiceObject
-  def result model
+  def get_result model
     Result.new model
   end
 end

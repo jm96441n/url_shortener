@@ -7,11 +7,12 @@ class Url::Create < ServiceObject
   def call
     if check_exists? @original
       @url = Url.where(original: @original).first
+      @url.request_count += 1
     else
       @url = Url.new(original: @original)
-      @url.save
     end
-    @result = result @url
+    @url.save
+    @result = get_result @url
   end
 
   private
