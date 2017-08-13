@@ -12,12 +12,9 @@ class UrlsController < ApplicationController
     @response = Url::Create.new(create_params[:original]).()
     @url      = @response.model
     if @response.errors.empty?
-      # redirect_to url_path(@url)
       render json: { shortened: @url.shortened }
     else
       render json: { errors: @response.errors }, status: 404
-      # flash[:error] = @response.errors
-      # redirect_to new_url_path
     end
   end
 

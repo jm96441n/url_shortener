@@ -41,6 +41,9 @@ gem 'sprockets-es6'
 # Bootstrap Framework
 gem 'bootstrap', '~> 4.0.0.alpha5'
 
+# Tether for bootstrap tooltips
+gem 'tether-rails'
+
 # HAML
 gem 'haml-rails', '~> 0.9'
 
@@ -52,6 +55,7 @@ group :development, :test do
   gem 'guard-rspec', require: false
   gem 'factory_girl_rails'
   gem 'capybara'
+  gem "capybara-webkit"
 end
 
 group :development do

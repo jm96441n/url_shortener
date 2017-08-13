@@ -5,6 +5,11 @@ let collapse = () => {
   }
 }
 
+let urlFormatter = (shortCode) => {
+  const baseUrl = window.location.href
+  return baseUrl + shortCode
+}
+
 $(document).ready( () => {
 
   $(document).on('submit', 'form#new_url', (e) => {
@@ -19,7 +24,8 @@ $(document).ready( () => {
       url:    submitUrl,
       success: (response) => {
         collapse();
-        $('#shortened').text(response.shortened)
+        let formattedUrl = urlFormatter(response.shortened)
+        $('#shortened').text(formattedUrl)
         $('#create-button').attr('disabled', false);
       }
     })
