@@ -55,7 +55,8 @@ group :development, :test do
   gem 'guard-rspec', require: false
   gem 'factory_girl_rails'
   gem 'capybara'
-  gem "capybara-webkit"
+  gem 'capybara-webkit'
+  gem 'launchy'
 end
 
 group :development do
