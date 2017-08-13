@@ -27,6 +27,9 @@
       .col-md-3
         %span
           = link_to shortened_url, shortened_url
+        %span
+          %a{:href => shortened_url, onclick: 'copyToClipboard(event)'}
+            %i.fa.fa-copy
       .col-md-2
         %span
           = url.request_count
