@@ -1,2 +1,19 @@
-// Place all the behaviors and hooks related to the matching controller here.
-// All this logic will automatically be available in application.js.
+$(document).ready( () => {
+
+  $(document).on('submit', 'form#new_url', (e) => {
+    e.preventDefault();
+    const $form     = $(e.target);
+    const submitUrl = $form.prop('action');
+    const data      = $form.serialize();
+
+    $.ajax({
+      method: 'POST',
+      data:   data,
+      url:    submitUrl,
+      success: (response) => {
+        $('#shortened').text(response.shortened)
+        $('#create-button').attr('disabled', false);
+      }
+    })
+  })
+})

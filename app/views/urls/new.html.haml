@@ -7,4 +7,7 @@
         %p
           = f.text_field :original, class: 'form-control'
         %p
-          = f.submit 'Shorten My Url!', class: 'btn btn-primary'
+          = f.submit 'Shorten My Url!', class: 'btn btn-primary', id: 'create-button'
+    %div
+      %p Your new shortened url:
+      %span#shortened
