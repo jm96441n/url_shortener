@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+i = 0
+
+until i > 100
+  original = "https://example.com/#{i}"
+  url      = Url.new(original: original)
+  url.save
+  i += 1
+end
