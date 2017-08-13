@@ -2,10 +2,14 @@
 
 %ol
   - @urls.each do |url|
+    - shortened_url = format_url(entire_shortened_url(url))
+    - original_url  = format_url url.original
     .url
       %li
         %span
-          %a{:href => url.original} url.original
+          %a{:href => original_url}
+            = url.original
         %span
-          %a{:href => url.shortened} url.shortened
-        %span url.request_count
+          = link_to shortened_url, shortened_url
+        %span
+          = url.request_count
