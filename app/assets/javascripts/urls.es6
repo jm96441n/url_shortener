@@ -1,3 +1,10 @@
+let collapse = () => {
+  let collapseDiv = $('#shortened-container')
+  if (!collapseDiv.hasClass('show')) {
+    collapseDiv.collapse('show')
+  }
+}
+
 $(document).ready( () => {
 
   $(document).on('submit', 'form#new_url', (e) => {
@@ -11,6 +18,7 @@ $(document).ready( () => {
       data:   data,
       url:    submitUrl,
       success: (response) => {
+        collapse();
         $('#shortened').text(response.shortened)
         $('#create-button').attr('disabled', false);
       }
