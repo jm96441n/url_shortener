@@ -17,7 +17,7 @@
   - @urls.each_with_index do |url, idx|
     - shortened_url = format_url(entire_shortened_url(url))
     - original_url  = format_url url.original
-    .row.url
+    .row.row-striped.url
       .col-md-1.offset-md-1
         = idx + 1
       .col-md-4

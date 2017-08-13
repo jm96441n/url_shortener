@@ -49,3 +49,16 @@ html,body {
 .container {
   margin-top: 5%;
 }
+
+.url {
+  padding-bottom: 1%;
+  padding-top: 1%;
+}
+
+.row-striped:nth-of-type(odd){
+  background-color: #efefef;
+}
+
+.row-striped:nth-of-type(even){
+  background-color: #ffffff;
+}
