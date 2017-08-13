@@ -1,5 +1,10 @@
-%p Enter Your Url Below
+.row.vertical-center-row.url-converter
+  .col-md-4.offset-md-4
+    #url-form
+      %p Enter Your Url Below
 
-= form_for @url do |f|
-  = f.text_field :original
-  = f.submit 'Shorten Your Url!'
+      = form_for @url, class: 'form-group' do |f|
+        %p
+          = f.text_field :original, class: 'form-control'
+        %p
+          = f.submit 'Shorten My Url!', class: 'btn btn-primary'

@@ -1,4 +1,18 @@
-// Place all the styles related to the urls controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-@import "bootstrap";
+.navbar {
+  border-bottom: 1px solid black;
+}
+
+.url-converter {
+  height: 100vh;
+  background-image: image_url('hero_img.jpg');
+  background-size: 100% 100%;
+}
+
+#url-form {
+  margin-top: 50%;
+}
+
+.form-control {
+  width: 75%;
+  margin: auto;
+}
