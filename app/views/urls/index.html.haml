@@ -1,0 +1,11 @@
+%h3 Look At All These Urls!
+
+%ol
+  - @urls.each do |url|
+    .url
+      %li
+        %span
+          %a{:href => url.original} url.original
+        %span
+          %a{:href => url.shortened} url.shortened
+        %span url.request_count
