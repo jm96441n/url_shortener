@@ -1,5 +1,9 @@
 class UrlsController < ApplicationController
 
+  def index
+    @urls = Url.order(request_count: :desc).limit(100)
+  end
+
   def new
     @url = Url.new
   end
@@ -19,7 +23,6 @@ class UrlsController < ApplicationController
     @url = Url.where(id: params[:id]).first
     @url
   end
-
 
   private
 
