@@ -1,6 +1,6 @@
 module UrlsHelper
   def entire_shortened_url url
-    "#{request.domain}/#{url.shortened}"
+    "#{request.base_url}/#{url.shortened}"
   end
 
   def format_url url
