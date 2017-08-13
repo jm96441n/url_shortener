@@ -5,7 +5,7 @@
 
       = form_for @url, class: 'form-group' do |f|
         %p
-          = f.text_field :original, class: 'form-control'
+          = f.text_field :original, class: 'form-control', required: true
         %p
           = f.submit 'Shorten My Url!', class: 'btn btn-primary', id: 'create-button'
     %a{:href => "#", 'data-toggle' => 'collapse'}

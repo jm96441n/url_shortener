@@ -10,6 +10,23 @@ let urlFormatter = (shortCode) => {
   return baseUrl + shortCode
 }
 
+let copyToClipboard = (event) => {
+  event.preventDefault();
+  let url         = $('#shortened').text();
+  let placeholder = document.createElement('input');
+  placeholder.setAttribute('value', url);
+  document.body.appendChild(placeholder);
+  placeholder.select();
+  document.execCommand('copy');
+  document.body.removeChild(placeholder)
+}
+
+let makeButton = (url) => {
+  let buttonHtml = `<a href='#' onclick='copyToClipboard(event)'>Copy <i class='fa fa-clone' aria-hidden='true'/></a>`
+  return buttonHtml
+}
+
+
 $(document).ready( () => {
 
   $(document).on('submit', 'form#new_url', (e) => {
@@ -24,8 +41,12 @@ $(document).ready( () => {
       url:    submitUrl,
       success: (response) => {
         collapse();
-        let formattedUrl = urlFormatter(response.shortened)
-        $('#shortened').text(formattedUrl)
+        let formattedUrl = urlFormatter(response.shortened);
+        let copyButton   = makeButton(formattedUrl);
+
+        $('#shortened').text(formattedUrl);
+        $('#shortened-container').append(copyButton);
+
         $('#create-button').attr('disabled', false);
       }
     })

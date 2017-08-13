@@ -41,6 +41,8 @@ gem 'sprockets-es6'
 # Bootstrap Framework
 gem 'bootstrap', '~> 4.0.0.alpha5'
 
+# Font Awesome
+gem "font-awesome-rails"
 
 # HAML
 gem 'haml-rails', '~> 0.9'
