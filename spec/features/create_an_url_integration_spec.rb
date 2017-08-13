@@ -19,10 +19,10 @@ RSpec.describe 'Creating a new shortened url', type: :feature do
 
   it 'allows you to enter an url that exists but does not create a new url object' do
 
-    create(:url)
+    url = create(:url)
     visit new_url_path
 
-    fill_in 'url[original]', with: 'https://www.example.com'
+    fill_in 'url[original]', with: url.original
     expect{ click_button 'Shorten Your Url!' }.to_not change{ Url.count }
   end
 

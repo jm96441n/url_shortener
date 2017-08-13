@@ -22,7 +22,7 @@ RSpec.describe Result, type: :model do
     let!(:good_url)  { create(:url) }
 
     before do
-      @bad_url = Url.create(original: 'https://www.example.com')
+      @bad_url = Url.create(original: good_url.original)
       @result  = Result.new(@bad_url)
     end
 

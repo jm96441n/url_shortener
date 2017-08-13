@@ -5,7 +5,7 @@ RSpec.describe UrlsController, type: :controller do
     let(:params) {
       {
         url: {
-          original: 'https://www.example.com'
+          original: 'https://www.example.com/001'
         }
       }
     }

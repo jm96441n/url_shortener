@@ -1,5 +1,7 @@
 FactoryGirl.define do
   factory :url do
-    original 'https://www.example.com'
+    sequence(:original) do |n|
+      "https://www.example.com/#{"%.3i" %n}"
+    end
   end
 end

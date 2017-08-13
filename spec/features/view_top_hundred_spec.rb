@@ -2,14 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'View Top Hundred', type: :feature do
   before do
-    i = 0
-    100.times do
-      url = 'https://example.com/' + i.to_s
-      2.times do
-        Url::Create.new(url).()
-      end
-      i += 1
-    end
+    create_list(:url, 100, request_count: 2)
     create(:url, original: 'www.thisIsAnExtraOne.com')
   end
 

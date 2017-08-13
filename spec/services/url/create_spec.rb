@@ -19,17 +19,17 @@ RSpec.describe Url::Create, type: :service do
     let!(:existing_url) { create(:url) }
 
     it 'does not create a new url if an url already exists' do
-      expect{ Url::Create.new(original).() }.to_not change{ Url.count }
+      expect{ Url::Create.new(existing_url.original).() }.to_not change{ Url.count }
     end
 
     it 'returns the existing url object if it exists' do
-      response     = Url::Create.new(original).()
+      response     = Url::Create.new(existing_url.original).()
 
       expect(response.model).to eql existing_url
     end
 
     it 'updates the request_count of an existing url' do
-      response     = Url::Create.new(original).()
+      response     = Url::Create.new(existing_url.original).()
 
        expect(response.model.request_count).to eql 2
     end
