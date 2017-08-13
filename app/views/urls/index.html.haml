@@ -1,15 +1,32 @@
-%h3 Look At All These Urls!
+.container
+  .row
+    .col-md-4.offset-md-4
+      %h3 Look At All These Urls!
 
-%ol
-  - @urls.each do |url|
+  .row
+    .col-md-1.offset-md-1
+      Rank
+    .col-md-4
+      Original
+    .col-md-3
+      Shortened
+    .col-md-2
+      %span
+        Request Count
+
+  - @urls.each_with_index do |url, idx|
     - shortened_url = format_url(entire_shortened_url(url))
     - original_url  = format_url url.original
-    .url
-      %li
+    .row.url
+      .col-md-1.offset-md-1
+        = idx
+      .col-md-4
         %span
           %a{:href => original_url}
             = url.original
+      .col-md-3
         %span
           = link_to shortened_url, shortened_url
+      .col-md-2
         %span
           = url.request_count
