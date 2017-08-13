@@ -2,38 +2,38 @@ require 'rails_helper'
 
 RSpec.describe 'Creating a new shortened url', type: :feature do
 
-  it 'takes you to the page to create a new shortened url' do
+  it 'takes you to the page to create a new shortened url', js: true do
     visit new_url_path
 
     expect(page).to have_content('Enter Your Url Below')
     expect(page).to have_css('#url_original')
   end
 
-  it 'allows you to create a new shortened url' do
+  it 'allows you to create a new shortened url', js: true do
     visit new_url_path
 
     fill_in 'url[original]', with: 'https://www.example.com'
-    expect{ click_button 'Shorten Your Url!' }.to change{ Url.count }.by 1
+    expect{ click_button 'Shorten My Url!' }.to change{ Url.count }.by 1
 
   end
 
-  it 'allows you to enter an url that exists but does not create a new url object' do
+  it 'allows you to enter an url that exists but does not create a new url object', js: true do
 
     url = create(:url)
     visit new_url_path
 
     fill_in 'url[original]', with: url.original
-    expect{ click_button 'Shorten Your Url!' }.to_not change{ Url.count }
+    expect{ click_button 'Shorten My Url!' }.to_not change{ Url.count }
   end
 
-  it 'takes you to the show page for your new shortened url' do
+  it 'takes you to the show page for your new shortened url', js: true do
     visit new_url_path
 
     fill_in 'url[original]', with: 'https://www.banana.com'
-    click_button 'Shorten Your Url!'
+    click_button 'Shorten My Url!'
 
     url = Url.last
 
-    expect(page.find('#shortened_url')).to have_content("example.com/#{url.shortened}")
+    expect(page.find('#shortened')).to have_content("example.com/#{url.shortened}")
   end
 end
