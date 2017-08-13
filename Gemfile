@@ -41,8 +41,6 @@ gem 'sprockets-es6'
 # Bootstrap Framework
 gem 'bootstrap', '~> 4.0.0.alpha5'
 
-# Tether for bootstrap tooltips
-gem 'tether-rails'
 
 # HAML
 gem 'haml-rails', '~> 0.9'
