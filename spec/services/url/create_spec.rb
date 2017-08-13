@@ -31,7 +31,7 @@ RSpec.describe Url::Create, type: :service do
     it 'updates the request_count of an existing url' do
       response     = Url::Create.new(existing_url.original).()
 
-       expect(response.model.request_count).to eql 2
+      expect(response.model.request_count).to eql 2
     end
   end
 end
