@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Creating a new shortened url' do
+RSpec.describe 'Creating a new shortened url', type: :feature do
 
   it 'takes you to the page to create a new shortened url' do
     visit new_url_path
