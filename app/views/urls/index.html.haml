@@ -6,11 +6,11 @@
   .row
     .col-md-1.center-content
       Rank
-    .col-md-4
+    .col-md-4.center-content
       Original
-    .col-md-3
+    .col-md-3.center-content
       Shortened
-    .col-md-2
+    .col-md-2.center-content
       %span
         Request Count
 
@@ -19,16 +19,16 @@
     .row.row-striped.url
       .col-md-1.center-content
         = idx + 1
-      .col-md-4
+      .col-md-4.center-content
         %span
           %a{:href => url.original}
             = url.original
-      .col-md-3
+      .col-md-3.center-content
         %span
           = link_to shortened_url, shortened_url
         %span
           %a{:href => shortened_url, onclick: 'copyToClipboard(event)'}
             %i.fa.fa-copy
-      .col-md-2
+      .col-md-2.center-content
         %span
           = url.request_count
