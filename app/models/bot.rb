@@ -9,7 +9,7 @@ class Bot
 
   def multiple_url_shortening amount, url
     amount.times do
-      shorten_an_url shortener_url, url
+      shorten_an_url url
     end
   end
 
