@@ -7,14 +7,14 @@ class Bot
       }
   end
 
-  def multiple_url_shortening amount, shortener_url, url
+  def multiple_url_shortening amount, url
     amount.times do
       shorten_an_url shortener_url, url
     end
   end
 
-  def shorten_an_url shortener_url, url
-    page = @agent.get shortener_url
+  def shorten_an_url url
+    page = @agent.get 'https://trohs.herokuapp.com/'
 
     page.form_with(id: 'new_url') do |form|
       form.field_with(name: 'url[original]').value = url
