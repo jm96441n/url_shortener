@@ -30,6 +30,8 @@ Now that you're in the file directory, you need to install the required gem depe
 bundle install
 ```
 
+Note: We use Capybara Webkit to run some headless tests, if you don't already have this installed or have any doubts about running it check out their repo [here](https://github.com/thoughtbot/capybara-webkit). One of the dependecies for Capybara Webkit to run is to have qmake locally installed. For more information about installing qmake for use with Capybara Webkit checkout their wiki article about it [here](https://github.com/thoughtbot/capybara-webkit/wiki/Installing-Qt-and-compiling-capybara-webkit)
+
 #### 3. Setup your local database
 
 Alright, you've got the code locally and the dependencies installed, let's get your local database and you'll be good to go! To do this you need to run two commands in your terminal. 
