@@ -4,7 +4,7 @@ namespace :bot do
     puts "running ....."
     bot = Bot.new
 
-    bot.multiple_url_shortening 20000, 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+    bot.multiple_url_shortening 200, 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
 
      bot.multiple_url_shortening 90, 'https://www.youtube.com/watch?v=1dCNKpAFob0'
 
