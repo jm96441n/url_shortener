@@ -1,3 +1,5 @@
+require 'mechanize'
+
 class Bot
   def initialize
     @agent = Mechanize.new { |a|
@@ -20,7 +22,7 @@ class Bot
     end.submit
   end
 
-  def popuplate
+  def populate
     puts "running ....."
 
     self.multiple_url_shortening 200, 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
