@@ -36,6 +36,7 @@ namespace :bot do
 
      until i < 1
       bot.multiple_url_shortening i, "http://www.example.com/#{i}"
+      i -= 1
      end
      puts "aaaaaand done!!"
   end
