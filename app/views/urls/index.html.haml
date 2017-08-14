@@ -4,7 +4,7 @@
       %h3 Top 100 Requested URL's
 
   .row
-    .col-md-1.offset-md-1
+    .col-md-1.center-content
       Rank
     .col-md-4
       Original
@@ -17,7 +17,7 @@
   - @urls.each_with_index do |url, idx|
     - shortened_url = entire_shortened_url(url)
     .row.row-striped.url
-      .col-md-1.offset-md-1
+      .col-md-1.center-content
         = idx + 1
       .col-md-4
         %span
