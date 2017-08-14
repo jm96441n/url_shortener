@@ -18,7 +18,6 @@ class Url::Create < ServiceObject
   private
 
   def check_exists? original
-    # TODO: Add methods so that "www.google.com", "https://www.google.com", "google.com", "http://www.google.com" are all treated as the same
     Url.where(original: original).exists?
   end
 end
