@@ -52,6 +52,31 @@ Now that you're all set up code wise, the last step to get yourself running is t
  
  And that's it! You're all set to check this out locally, and do some development.
  
+ #### 5. Running test suite
+ 
+ Depending on how you're developing you have two options for running the test suite. 
+ 
+ ##### 1. Using Guard (Continuous)
+ 
+ If you would like your tests to continuously while you develop, run in your terminal:
+ ```
+ bundle exec guard
+ ```
+ This will run tests continuously as you update your tests and the files they are testing. For more information check out the Guard repo [here](https://github.com/guard/guard)
+ 
+ ##### 2. Using RSpec (one off)
+ 
+ If you would like to run all the tests just once, from within the directory run:
+ ```
+ bundle exec rspec
+ ```
+ 
+ If you would like to run only one of the test files, run:
+ ```
+ bundle exec rspec [PATH TO SPEC FILE]
+ ```
+ For more information on rspec, check out the repo [here](https://github.com/rspec/rspec-rails)
+ 
  
  ## Contributing
  
