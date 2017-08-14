@@ -40,7 +40,7 @@ gem 'sprockets-es6'
 # gem 'capistrano-rails', group: :development
 
 # Bootstrap Framework
-gem 'bootstrap', '~> 4.0.0.alpha5'
+gem 'bootstrap', '~> 4.0.0.beta'
 
 # Font Awesome
 gem "font-awesome-rails"

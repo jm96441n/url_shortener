@@ -1,6 +1,5 @@
 %nav.navbar.navbar-toggleable-md.fixed-top
   = link_to ">>UrlShortener<<", root_path, class: 'navbar-brand nav-link'
-  .collapse.navbar-collapse
-    .navbar-nav.ml-auto
-      = link_to 'Top 100', urls_path, class: 'nav-link'
+  .navbar-nav.navbar-right
+    = link_to 'Top 100', urls_path, class: 'nav-link'
 

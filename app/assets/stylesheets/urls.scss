@@ -48,6 +48,10 @@ footer {
   background-size: 100% 100%;
 }
 
+.center-content {
+  margin: auto
+}
+
 @media only screen and (min-width : 770px) {
   #url-form {
     padding-top: 50%;
@@ -67,8 +71,6 @@ footer {
     margin: auto;
   }
 }
-
-
 
 
 #shortened-container {
@@ -95,4 +97,8 @@ footer {
 
 .row-striped:nth-of-type(even){
   background-color: #ffffff;
+}
+
+.footer-first {
+  margin-left: 26%;
 }
