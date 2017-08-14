@@ -31,6 +31,7 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+
 # allows for es6 in javascripts
 gem 'sprockets', '>= 3.0.0'
 gem 'sprockets-es6'
