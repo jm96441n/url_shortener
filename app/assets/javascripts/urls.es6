@@ -21,12 +21,6 @@ let copyToClipboard = (event) => {
   document.body.removeChild(placeholder)
 }
 
-let makeButton = (url) => {
-  let buttonHtml = `<a href='#' onclick='copyToClipboard(event)'>Copy <i class='fa fa-clone' aria-hidden='true'/></a>`
-  return buttonHtml
-}
-
-
 $(document).ready( () => {
 
   $(document).on('submit', 'form#new_url', (e) => {
@@ -42,10 +36,8 @@ $(document).ready( () => {
       success: (response) => {
         collapse();
         let formattedUrl = urlFormatter(response.shortened);
-        let copyButton   = makeButton(formattedUrl);
 
         $('#shortened').text(formattedUrl);
-        $('#shortened-container').append(copyButton);
 
         $('#create-button').attr('disabled', false);
       }

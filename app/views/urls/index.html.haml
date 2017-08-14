@@ -15,14 +15,13 @@
         Request Count
 
   - @urls.each_with_index do |url, idx|
-    - shortened_url = format_url(entire_shortened_url(url))
-    - original_url  = format_url url.original
+    - shortened_url = entire_shortened_url(url)
     .row.row-striped.url
       .col-md-1.offset-md-1
         = idx + 1
       .col-md-4
         %span
-          %a{:href => original_url}
+          %a{:href => url.original}
             = url.original
       .col-md-3
         %span
