@@ -8,8 +8,6 @@ namespace :bot do
 
      bot.multiple_url_shortening 90, 'https://www.youtube.com/watch?v=1dCNKpAFob0'
 
-     bot.multiple_url_shortening 90, 'https://www.youtube.com/channel/UCs4aHmggTfFrpkPcWSaBN9g'
-
      bot.multiple_url_shortening 90, 'https://www.google.com'
 
      puts "still running ....."
@@ -32,7 +30,7 @@ namespace :bot do
 
      puts "still running ..... wow this takes a while doesn't it"
 
-     i = 89
+     i = 90
 
      until i < 1
       bot.multiple_url_shortening i, "http://www.example.com/#{i}"
