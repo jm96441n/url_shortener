@@ -33,8 +33,6 @@ class Url < ApplicationRecord
         key /= baseLength
       end
     end
-
-    self.shortened = shortened.reverse
     self.save
   end
 end
