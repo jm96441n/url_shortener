@@ -12,6 +12,9 @@ class Url::Create < ServiceObject
       @url = Url.new(original: @original)
     end
     @url.save
+
+    create_shortened @url if @url.shortened.nil?
+
     @result = get_result @url
   end
 
@@ -19,5 +22,9 @@ class Url::Create < ServiceObject
 
   def check_exists? original
     Url.where(original: original).exists?
+  end
+
+  def create_shortened url
+
   end
 end
